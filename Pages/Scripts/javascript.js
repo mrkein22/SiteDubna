@@ -70,55 +70,50 @@ document.getElementById("render_registr").innerHTML = text;
 
 var birthClick = false;
 
-document.getElementById("render_birthday").onclick =  function(){
-    if(birthClick) 
-    {
-        document.getElementById("form_birthday").innerHTML = "";
-        birthClick = false;
-    }
-    else
-    {
-        var months = ["Январь", "Февраль", "Март", "Апрель"];
+// document.getElementById("render_birthday").onclick =  function(){
+//     if(birthClick) 
+//     {
+//         document.getElementById("form_birthday").innerHTML = "";
+//         birthClick = false;
+//     }
+//     else
+//     {
+//         var months = ["Январь", "Февраль", "Март", "Апрель"];
 
-        form_birthday = "<form><select name = 'day'>";
+//         form_birthday = "<form><select name = 'day'>";
 
-        for(i = 1; i< 31; i++)
-            form_birthday = form_birthday + "<option value = " + i + ">"+ i + "</option>";
-        form_birthday = form_birthday + "</select><br><select name = 'month'>";
-        for(i = 0; i< months.length; i++)
-            form_birthday = form_birthday + "<option value = " + i + ">"+ months[i] + "</option>";
-        form_birthday = form_birthday + "</select>";
-        document.getElementById("form_birthday").innerHTML = form_birthday;
+//         for(i = 1; i< 31; i++)
+//             form_birthday = form_birthday + "<option value = " + i + ">"+ i + "</option>";
+//         form_birthday = form_birthday + "</select><br><select name = 'month'>";
+//         for(i = 0; i< months.length; i++)
+//             form_birthday = form_birthday + "<option value = " + i + ">"+ months[i] + "</option>";
+//         form_birthday = form_birthday + "</select>";
+//         document.getElementById("form_birthday").innerHTML = form_birthday;
         
-        birthClick = true;
-    }
-}
+//         birthClick = true;
+//     }
+// }
 var n;
 var start;
 function imag()
 {
     var f = 0;
      n = 1;
-     start = true;
+     start = false;
     var i;
     document.getElementById("img__gallery").src = "Images/Gallery/"+(n)+".png";
 }
 
+let timerID;
 function mult(){
-    
-    if(start == true){
-    let timerId = setTimeout(function tick() {
-        change();
-        timerId = setTimeout(tick, 1000); // (*)
-      }, 1000);
-      start = false;
+    if(start === true){
+        clearInterval(timerID);
+        start = false;
     }
     else {
-        
         start = true;
-        clearTimeout(timerId);
+        timerID = setInterval(change, 1000);
     }
-    
 }
 
 function change(){
@@ -133,12 +128,16 @@ function left(){
     if(n==0) {n = 6;}
     document.getElementById("img__gallery").src="Images/Gallery/"+n+".png";
     n--;
+    size = document.getElementById("size");
+    document.getElementById("img__gallery").style.width = size.value+"px";
 }
 
 function right(){
     if(n==6) {n = 1;}
     document.getElementById("img__gallery").src="Images/Gallery/"+n+".png";
     n++;
+    size = document.getElementById("size");
+    document.getElementById("img__gallery").style.width = size.value+"px";
 }
 
 function resize(){
