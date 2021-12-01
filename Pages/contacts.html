@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link href="Styles/style.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+    <article>
+        <h1 class = "header__title">Веб-технологии</h1>
+        <h3 class="header__title">Университет "Дубна"</h3>
+    </article>
+    
+    <div class="menu">
+        
+        <div class="menu__logo"><img src="Images/About/Logo.png" alt="logo" width="60"></div>
+        <div class="menu__links">
+            
+            <div class="menu__links__item">
+                <a class="menu__link" href="About.html">О себе</a>
+            </div>
+            
+            <div class="menu__links__item">
+                <a class="menu__link" href="resume.html">Резюме</a>
+            </div>
+            
+            <div class="menu__links__item">
+                <a class="menu__link" href="portfolio.html">Портфолио</a>
+            </div>
+
+            <div class="menu__links__item">
+                <a class="menu__link" href="competence.html">Компетенции</a>
+            </div>
+            
+            <div class="menu__links__item">
+                <div class="menu__link__chosen">Контакты</div>
+            </div>
+            
+            <div class="menu__links__item">
+                <a class="menu__link" href="gallery.html">Галерея</a>
+            </div>
+        </div>
+    </div>
+
+    
+    <form action="javascript:reg()" method="GET" name="registr">
+        <label for="login">Введите логин
+            <input type="text" id = "login" name = "login" placeholder="login" size = "10" pattern=[a-zA-Z]+ required>
+        </label><br>
+        <label for = "password">Введите пароль
+            <input type="password" id="password" name="pas" size="10" pattern=[a-zA-Z0-9]+ required>
+        </label><br>
+        <label for="email">Введите адрес
+            <input type="email" id="email" name="email" size="10" required>
+        </label><br>
+        <label for="mailing">Подписаться на рассылку
+            <input type="checkbox" id = "mailing" name="mailing" value="mailing_true"checked>
+        </label><br>
+        Пол<br>
+        <label for="gender_m"><input type="radio" id="gender_m" name="gender" value="m"checked>Мужской</label><br>
+        <label for="gender_w"><input type="radio" id="gender_w" name="gender" value="w"checked>Женский</label><br>
+
+        <select name="city">Укажите город
+            <option value="Dubna">Дубна</option>
+            <option value="Ufa">Уфа</option>
+            <option value="Moscow">Москва</option>
+            
+        </select>
+        <br>
+        
+        
+        
+        <input type="submit" value="Подтвердить">
+        <input type="reset">
+        <div id = "render_registr"></div>
+        <br>    
+    </form>
+    
+
+    <button id="render_birthday">Указать дату рождения</button>
+    <br>
+    <div id = "form_birthday"></div>
+
+    
+    
+    
+    <footer class = "footer__contacts">
+        
+        <div class="footer__contacts__content">
+            <div class="footer__frame">
+                <h2>Я в социальных сетях:</h2>
+                <div>
+                    <a href="https://vk.com/timon___timon"><img src="Images/Footer/1.png" alt="logo" width="60"></a>
+                    <a href=""><img src="Images/Footer/2.png" alt="logo" width="60"></a>
+                    <a href=""><img src="Images/Footer/3.png" alt="logo" width="60"></a>
+                </div>
+            </div>
+
+            <div class="footer__frame">
+                <h2 class="footer__header">
+                    Почта:
+                </h2>
+                <div class="footer__contacts__text">
+                    gtr.20@uni-dubna.ru
+                </div>
+            </div>
+
+            <div class="footer__frame">
+                <h2 class="footer__header">
+                    Телефон
+                </h2>
+                <div class="footer__contacts__text">
+                    8(800)555-55-35
+                </div>
+            </div>
+        </div>
+        <div class = "footer__sign contacts">Сайт разработан Гафаровым Тимуром Радиевичем, Copyright © 2021</div>
+    </footer>
+    
+</body>
+<script src = "Scripts/javascript.js"></script>
+</html>

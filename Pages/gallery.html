@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Портфолио</title>
+    <link href="Styles/style.css" rel="stylesheet" type="text/css"/>
+</head>
+<body class="gallery__body" onload="imag()">
+
+    <div class="menu">
+        
+        <div class="menu__logo"><img src="Images/About/Logo.png" alt="logo" width="60"></div>
+        <div class="menu__links">
+            <div class="menu__links__item">
+                <a class="menu__link" href="About.html">О себе</a>
+            </div>
+            <div class="menu__links__item"><a class="menu__link" href="resume.html">Резюме</a></div>
+                <div class="menu__links__item"><a class="menu__link" href="portfolio.html">Портфолио</a></div>
+            <div class="menu__links__item"><a class="menu__link" href="competence.html">Компетенции</a></div>
+            <div class="menu__links__item"><a class="menu__link" href="contacts.html">Контакты</a></div>
+            <div class="menu__links__item">
+                <div class="menu__link__chosen">Галерея</div>
+            </div>
+        </div>
+    </div>
+
+    <div class = "photo">
+        <div class="flex__container">
+            <button onclick="left();" id = "left"> < </button>
+            <img class="img__gallery" id = "img__gallery">
+            <button onclick="right();" id="right"> > </button>
+        </div>
+    </div>
+    <button onclick="mult();" id = "start__stop">Стоп</button>
+    
+    <form>
+        <select name = "size" onchange = "resize();" id = "size">
+            <option value="700">700</option>
+            <option value="800">800</option>00</option>
+            <option value="900">900</option>
+            <option value="1000" selected>1000</option>
+        </select>
+    </form>
+
+    <footer class = "footer__original down">
+        <div class = "footer__original__icons">
+            <a href="https://vk.com/timon___timon"><img src="Images/Footer/1.png" alt="logo" width="60"></a>
+            <a href=""><img src="Images/Footer/2.png" alt="logo" width="60"></a>
+            <a href=""><img src="Images/Footer/3.png" alt="logo" width="60"></a>
+        </div>
+        <div>Сайт разработан Гафаровым Тимуром Радиевичем, Copyright © 2021</div>
+    </footer>
+<script src = "Scripts/javascript.js"></script>
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>About</title>
+    <link href="Styles/style.css" rel="stylesheet" type="text/css">
+    
+</head>
+<body onload="isDarkTheme('footer');">
+    <script>function ShowBlock() {
+        document.getElementById('menu').style.display = none;
+      }</script>
+    <article>
+        <h1 class = "header__title">Веб-технологии</h1>
+        <h3 class="header__title">Университет "Дубна"</h3>
+    </article>
+    <div class="menu" id="menu">
+
+        <div class="menu__logo"><img src="Images/About/Logo.png" alt="logo" width="60"></div>
+        <div class="menu__links">
+            <div class="menu__links__item"><div class="menu__link__chosen" href="index.html">О себе</div></div>
+            <div class="menu__links__item"><a class="menu__link" href="resume.html">Резюме</a></div>
+                <div class="menu__links__item"><a class="menu__link" href = "portfolio.html">Портфолио</a></div>
+            <div class="menu__links__item"><a class="menu__link" href="competence.html">Компетенции</a></div>
+            <div class="menu__links__item"><a class="menu__link" href="contacts.html">Контакты</a></div>
+            <div class="menu__links__item">
+                <a class="menu__link" href="gallery.html">Галерея</a>
+            </div>
+        </div>
+    </div>
+
+    <button onclick="openbox('menu')">Скрыть блок</button>
+    <button onclick="DarkTheme('footer')">Тёмная тема</button>
+    <footer class = "footer__original down" id = "footer">
+        <div class = "footer__original__icons" >
+            <a href="https://vk.com/timon___timon"><img src="Images/Footer/1.png" alt="logo" width="60"></a>
+            <a href=""><img src="Images/Footer/2.png" alt="logo" width="60"></a>
+            <a href=""><img src="Images/Footer/3.png" alt="logo" width="60"></a>
+        </div>
+        <div >Сайт разработан Гафаровым Тимуром Радиевичем, Copyright © 2021</div>
+    </footer>
+
+    <script src = "Scripts/javascript.js"></script>
+    <script src = "Scripts/cookies.js"></script>
+</body>
+</html>
