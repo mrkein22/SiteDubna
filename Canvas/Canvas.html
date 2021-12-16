@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <canvas id = "squareCanvas" width="400" height="400" style="border:10px solid #000"></canvas>
+    <form>
+        <label for="col">Количество столбцов
+            <input type="number" name="col" id="col" value="5">
+        </label>
+        <input type="submit" onclick="Canvas()">
+    </form>
+    <script>
+
+            function Canvas(){
+            var x = document.getElementById("col").value;
+            let art = document.getElementById("squareCanvas");
+                let stylish = art.getContext("2d");
+            for (let i = 0; i < x; i++) {
+                stylish.fillStyle = "#529";
+                var rand = Math.random() * (150 - 25) + 25;
+                stylish.fillRect(25 * x, 400-rand,25,rand);
+                
+                
+                
+            }
+            
+        }
+        
+        
+    </script>
+    
+    
+</body>
+</html>
